@@ -6,7 +6,7 @@ param repositoryUrl string
 param branch string
 param appLocation string
 param apiLocation string
-param appArtifactLocation string
+param outputLocation string
 param repositoryToken string
 
 resource staticWebApp 'Microsoft.Web/staticSites@2021-03-01' = {
@@ -19,7 +19,7 @@ resource staticWebApp 'Microsoft.Web/staticSites@2021-03-01' = {
     buildProperties: {
       appLocation: appLocation
       apiLocation: apiLocation
-      appArtifactLocation: appArtifactLocation
+      outputLocation: outputLocation
     }
   }
   sku: {
