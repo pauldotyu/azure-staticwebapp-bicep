@@ -21,7 +21,7 @@ az rest --method get --uri https://management.azure.com/subscriptions/$sub/provi
 location=westus2
 
 # create the resource group
-rg=$(az group create -n project -l $location --query name)
+rg=$(az group create -n $project -l $location --query name)
 
 # set up parameters
 appName=$project
